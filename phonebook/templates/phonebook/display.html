@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h2>Phone Book</h2>
+
+
+
+{% for  f in form %}
+<p> <code>Name:{{ f.name }}</code>
+
+    <code>Phone Number:{{ f.phone_number }} </code>
+       <a href="/delete/ {{ f.id }}" ></a><button class="btn-danger" >  &#9989;</button>
+</p>
+
+{% endfor %}
+
+<button type="button" ><a href="/phonebook">Back</a></button>
+</body>
+</html>
