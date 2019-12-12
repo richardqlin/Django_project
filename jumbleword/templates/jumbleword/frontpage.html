@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "jumbleword/base.html" %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{% block content %}
+<div class="jumbotron">
+
+    <h3 class="text-center" style="color:lime">Main Page </h3>
+
+</div>
+
+<div class="container text-center">
+<a href="/jumbleword/jumble"><button class="btn btn-success">Add a word </button></a>
+
+<a href="/jumbleword/findout"><button class="btn btn-primary">find out words </button></a>
+
+<a href="/jumbleword/clear"><button class="btn btn-warning">Clear words </button></a>
+
+</div>
+{% endblock %}
+</body>
+</html>

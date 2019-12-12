@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+{% extends "jumbleword/base.html" %}
+
+{% load bootstrap4 %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{%  block content %}
+<div class="jumbotron">
+
+    <h3 class="text-center" style="color:navy">Jumbled words</h3>
+  <div class="text-center">
+<a href="/jumbleword"><button class="btn btn-primary">Go Back</button></a>
+    </div>
+</div>
+
+<div class="container text-center">
+<form autocomplete="off" action="/jumbleword/findout" method="post">
+{% for word in shuffle %}
+    {% csrf_token %}
+  <code> {{word }}:</code>
+  <code>  {{ form.word }}</code><br>
+<br>
+    {% endfor %}
+    <button type="submit" class="btn btn-success">Submit </button>
+
+
+    </form>
+
+
+</div>
+{% endblock %}
+</body>
+</html>
