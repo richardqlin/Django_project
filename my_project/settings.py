@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'onestopshop.apps.OnestopshopConfig',
     'jumbleword.apps.JumblewordConfig',
     'phonebook.apps.PhonebookConfig',
 
