@@ -12,19 +12,34 @@
 {% block content %}
 <div class="jumbotron">
 
-    <h3 class="text-center" style="color:blue">Result </h3><br>
+
+        {% if score > 0 %}
+    {% if score == total %}
+    <h3 class="text-center" style="color:lime">
+    Congradulations ! <br><br>
+ Score: {{score}} out of {{total}}</h3>
+    {% else %}
+    <h3 class="text-center" style="color:lightseagreen">
+    Result:
+ Score: {{score}} out of {{total}}</h3>
+
+{% endif %}
+    {% else %}
+     <h3 class="text-center" style="color:tomato">
+        Oops!:
+      <br><br>
+           Sorry, no score
+        {% endif %}
+    </h3>
+
+<br>
+
+        <br>
   <div class="text-center">
 <a href="/jumbleword"><button class="btn btn-primary">Go Back</button></a>
 
 
     </div>
-<br>
-<div class="container text-center">
-
-<h3>
-Score: {{score}} out of {{total}}
-    </h3>
-</div>
 </div>
 
 
